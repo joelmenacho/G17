@@ -12,11 +12,11 @@
  .header{
     position: fixed;
     z-index: 25;
-    top:0;
+    top: 0;
     left: 0;
     width: 100%;
-    background-color: #20232a80;
-    box-shadow: 0 0 0.0625rem 0.0625rem #fff8;
+    background-color: #ff143b;
+    box-shadow: 0 0 0.625rem 0.0625rem #0072ad (4, 126, 240, 0.533);
 }
 
 .header-nav{
@@ -28,7 +28,7 @@
   align-items: center;
   justify-content: space-between;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0 5rem;
 }
 
 .header-nav__link-logo-container {
@@ -37,7 +37,8 @@
 
 .header-nav__link-logo {
   width: 108px;
-  height: 32px;
+  height: 55px;
+  right: 10;
 }
 
 .header-nav__menu-list-container {
@@ -53,7 +54,8 @@
   color: #fff;
   font-weight: 700;
   text-decoration: none;
-  transition: color 0.25s;
+  transition: color 0.5s;
+  font-size: 20px;
 }
 
 .header-nav__menu-link:hover,
@@ -77,6 +79,21 @@
   width: 100%;
 }
 
+.card__header{
+  background-color: rgba(33, 36, 44, 10);
+  padding: 0.75rem;
+  border-radius: 20px;
+}
+.card__header-img-container {
+  display: flex;
+  overflow: hidden;
+  /* width: 256px;
+  height: 256px; */
+  border-radius: 10px;
+  background-color: #0072ad;
+  margin: auto;
+}
+
 @media (min-width:768px) {
   .header-nav__container{
     max-width: 1024px;
@@ -92,12 +109,12 @@
 .i-hero {
   position: relative;
   display: flex;
-  align-items: center;
-  background-image: url('../assets/img/bg-hero-react-galaxy.webp');
-  background-position: center;
+  align-items: 0px;
+  background-image: url('../assets/img/imagen_2.jpg');
+  background-position: 0%;
   background-size: cover;
   height: 100vh;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .i-hero::before {
@@ -150,14 +167,14 @@
 }
 
 .i-hero__info-paragraph {
-  display: none;
+  display: auto;
 }
 
 .i-hero__info-link {
-  background-color: #61dafb;
+  background-color: #ff143b;
   border: none;
   border-radius: 0.5rem;
-  color: #000;
+  color: #fff;
   font-weight: 700;
   font-size: 0.75rem;
   font-family: monospace;
