@@ -12,11 +12,10 @@
  .header{
     position: fixed;
     z-index: 25;
-    top: 0;
+    top:0;
     left: 0;
     width: 100%;
-    background-color: #ff143b;
-    box-shadow: 0 0 0.625rem 0.0625rem #0072ad (4, 126, 240, 0.533);
+    box-shadow: 0 0 0.0625rem 0.0625rem #fff8;
 }
 
 .header-nav{
@@ -27,8 +26,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 0 auto;
-  padding: 0 5rem;
+  padding: 0 1rem;
 }
 
 .header-nav__link-logo-container {
@@ -37,8 +35,7 @@
 
 .header-nav__link-logo {
   width: 108px;
-  height: 55px;
-  right: 10;
+  height: 32px;
 }
 
 .header-nav__menu-list-container {
@@ -54,8 +51,7 @@
   color: #fff;
   font-weight: 700;
   text-decoration: none;
-  transition: color 0.5s;
-  font-size: 20px;
+  transition: color 0.25s;
 }
 
 .header-nav__menu-link:hover,
@@ -79,42 +75,15 @@
   width: 100%;
 }
 
-.card__header{
-  background-color: rgba(33, 36, 44, 10);
-  padding: 0.75rem;
-  border-radius: 20px;
-}
-.card__header-img-container {
-  display: flex;
-  overflow: hidden;
-  /* width: 256px;
-  height: 256px; */
-  border-radius: 10px;
-  background-color: #0072ad;
-  margin: auto;
-}
-
-@media (min-width:768px) {
-  .header-nav__container{
-    max-width: 1024px;
-  }
-}
-
-@keyframes spin {
-  to{
-    transform: rotate(360deg);
-  }
-}
-
 .i-hero {
   position: relative;
   display: flex;
-  align-items: 0px;
-  background-image: url('../assets/img/imagen_2.jpg');
-  background-position: 0%;
+  align-items: center;
+  /* justify-content: center; */
+  background-image: url('../assets/img/bg-hero-react-galaxy.webp');
+  background-position: center;
   background-size: cover;
   height: 100vh;
-  overflow: visible;
 }
 
 .i-hero::before {
@@ -138,20 +107,18 @@
 }
 
 .i-hero__container {
-  z-index: 5;
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
   padding: 0 1rem;
-  
+  z-index: 5;
 }
 
 .i-hero__info-container {
   display: flex;
   flex-direction: column;
   align-items:center ;
-  gap: 0.75rem;
-  max-width: 448px;
+  gap: 1rem;
 }
 
 .i-hero__info-title {
@@ -186,125 +153,32 @@
 }
 
 .i-hero__info-link:hover {
-  box-shadow: 0 0 0 0.25rem 0  #61dafb;
+  box-shadow: 0 0 0 0  #61dafb;
   filter: brightness(112.5%)
 }
 
 .i-hero__img-container {
   display:flex;
+  flex-direction: row;
   justify-content: center;
 }
-  
+
 .i-hero__img-pro-tech-container {
-  position: relative;
-}
-
-.i-hero__img-pro {
-  display: block;
-  background-color: #0004;
-  border-radius: 50%;
-  width: 256px;
-  height: 256px;
-  /* clip-path: polygon(50% 0%, 0% 100%, 100% 100%); */
-}
-
-.i-hero__img-tech-container {
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
+  background-color: #fff8;
   margin: 0;
-  animation: spin 10s linear 0s infinite normal none running;
 }
 
-.i-hero__img-tech {
-  position: absolute;
-  width: 64px;
-  height: 64px;
+.i-hero__img-pro {
+  background-color: #00000080;
+  border-radius: 50%;
+  width: 25
 }
 
-.i-hero__img-tech:nth-child(1) {
-  top: 100%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(0deg);
-}
+.i-hero__img-tech-container {}
 
-.i-hero__img-tech:nth-child(2) {
-  top: 50%;
-  left: 0%;
-  transform: translate(-50%, -50%) rotate(90deg);
-}
-
-.i-hero__img-tech:nth-child(3) {
-  top: 50%;
-  left: 100%;
-  transform: translate(-50%, -50%) rotate(-90deg);
-}
-
-.i-hero__img-tech:nth-child(4) {
-  top: 0%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(180deg);
-}
-
-@media (min-width: 768px) {
-  .i-hero__container {
-    max-width: 1024px;
-    margin: 0 auto;
-    padding: 0.75rem;
-  }
-
-  /* .i-hero__info-container {
-    gap: 1rem;
-  } */
-
-  .i-hero__info-title {
-    font-size: 1.75rem;
-  }
-
-  .i-hero__info-subtitle {
-    font-size: 1.5rem;
-  }
-
-  .i-hero__info-paragraph {
-    display: flex;
-    font-size: 1.25rem;
-    text-align: center;
-    margin: 0;
-  }
-
-  .i-hero__info-link {
-    font-size: 1rem;
-  }
-}
-
-@media (min-width: 768px) {
-  .i-hero__container {
-    max-width: 1024px;
-    padding: 0.75rem;
-  }
-
-  /* .i-hero__info-container {
-    gap: 1rem;
-  } */
-
-  .i-hero__info-title {
-    font-size: 1.75rem;
-  }
-
-  .i-hero__info-subtitle {
-    font-size: 1.5rem;
-  }
-
-  .i-hero__info-paragraph {
-    display: flex;
-    font-size: 1.25rem;
-    text-align: center;
-    margin: 0;
-  }
-
-  .i-hero__info-link {
-    font-size: 1rem;
-  }
-}
+.i-hero__img-tech {}
